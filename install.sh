@@ -54,7 +54,7 @@ do_install() {
     F=$1
     # if file not present locally on disk then we must be installing from web
     if [ ! -f $F ]; then
-        curl -k -o $DESTDIR/$F "https://raw.githubusercontent.com/beakerlib/beakerlib/master/src/$F"
+        curl -k -o $DESTDIR/$F "https://raw.githubusercontent.com/beakerlib/beakerlib/testing/src/$F"
         chmod 0644 $DESTDIR/$F
     else
         # otherwise we're building an RPM or installing via make
